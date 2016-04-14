@@ -8,13 +8,13 @@ Url shortener for the [recently deceased](http://vignette3.wikia.nocookie.net/be
 
 ## Goals
 ### Bronze
-- View a form on the main page
-- Input a log url into the form
-- Create a short(er) url
-- Add long url to the database
++ View a form on the main page
++ Input a long url into the form
++ Create a short(er) url
++ Add long url to the database
 
 ### Silver
-- Redirect user to long url when using short url
++ Redirect user to long url when using short url
 - Add angular to application stack to handle routing
 
 ### Gold
@@ -30,9 +30,10 @@ Url shortener for the [recently deceased](http://vignette3.wikia.nocookie.net/be
 - Determining who would work on which part of the project. Solution: Jeff/Melissa paired on Express set up, Isaac worked on db set up, and Maureen on public and views set up. When domains crossed, we would pair to connect our pieces together. (Example: Jeff/Isaac connecting the db to express)
 - Testing while portions unfinished. Solution: Dummy data.
 - Connecting the database. Solution: Pairing. Group effort.
+- Generating short url to insert into database. Solution: Hidden form field where short url is generated.
 
 ## Unsolved issues
-None so far.
+- Get short url to display AFTER submit
 
 ## Initial Planning
 ### Wireframe
