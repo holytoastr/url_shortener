@@ -29,7 +29,7 @@ app.get("/index", function(req, res){
   res.render("index");
 }); // end index view
 
-app.get("/index/:name", function(req, res){
+app.get("/index/:url", function(req, res){
   Crypt.findOne({name: req.params.name}).then(function(urlshortener){
     res.render("index", {
       urlshortener: urlshortener
@@ -40,7 +40,7 @@ app.get("/index/:name", function(req, res){
 app.post("/index", function(req, res){
   Crypt.create(req.body.url).then(function(url){
 
-    res.redirect("/index/:name");
+    res.redirect("/index/:url");
   });
 }); // end post request to crypt
 
