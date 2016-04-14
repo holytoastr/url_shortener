@@ -38,15 +38,8 @@ app.get("/index/:name", function(req, res){
 }); // end generated crypt view
 
 app.post("/index", function(req, res){
-  function makeKey(){
-    var key = "";
-    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    for(var i=0; i < 4; i++){
-      text += possible.charAt(Math.floor(Math.random() * possible.length));
-      return key;
-    }
-  }
-  Crypt.create(req.body.long_url).then(function(url, key){
+  Crypt.create(req.body.url).then(function(url){
+
     res.redirect("/index/:name");
   });
 }); // end post request to crypt
