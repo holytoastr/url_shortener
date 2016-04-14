@@ -7,8 +7,13 @@ var UrlShortenerSchema = new mongoose.Schema(
   }
 );
 
+if(process.env.NODE_ENV == "production"){
+  mongoose.connect(process.env.MONGODB_URI);
+}else{
+  mongoose.connect("mongodb://localhost/urlshortener");
+}
 mongoose.model("Url", UrlShortenerSchema);
-mongoose.connect("mongodb://localhost/urlshortener");
+
 
 var seedData = require("./seeds.json");
 module.exports = mongoose;
