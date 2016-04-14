@@ -24,6 +24,25 @@ app.get("/", function(req, res){
 
 }); // end index view
 
+app.get("/cryptly", function(req, res){
+  res.render("cryptly-index");
+});
+
+app.get("/cryptly/:name", function(req, res){
+  Crypt.findOne({name: req.params.name}).then(function(TBD){
+    res.render("cryptly-show", {
+      TBD: TBD
+    });
+  });
+});
+
+app.post("/cryptly", function(req, res){
+  short_url = TBD;
+  TBD.create(req.body.long_url).then(function(long_url, short_url){
+    res.redirect("/cryptly/:name");
+  });
+});
+
 app.listen(app.get("port"), function(){
   console.log("Boo!");
 }); // end listen
