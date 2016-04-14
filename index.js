@@ -25,19 +25,19 @@ app.get("/", function(req, res){
 
 }); // end default view
 
-app.get("/cryptly", function(req, res){
-  res.render("cryptly-index");
+app.get("/index", function(req, res){
+  res.render("index");
 }); // end index view
 
-app.get("/cryptly/:name", function(req, res){
+app.get("/index/:name", function(req, res){
   Crypt.findOne({name: req.params.name}).then(function(urlshortener){
-    res.render("cryptly-show", {
+    res.render("index", {
       urlshortener: urlshortener
     });
   });
 }); // end generated crypt view
 
-app.post("/cryptly", function(req, res){
+app.post("/index", function(req, res){
   function makeKey(){
     var key = "";
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -46,8 +46,8 @@ app.post("/cryptly", function(req, res){
       return key;
     }
   }
-  Url.create(req.body.long_url).then(function(url, key){
-    res.redirect("/cryptly/:name");
+  Crypt.create(req.body.long_url).then(function(url, key){
+    res.redirect("/index/:name");
   });
 }); // end post request to crypt
 
