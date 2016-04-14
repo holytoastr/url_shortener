@@ -1,6 +1,7 @@
-<form method = "post">
-  <input type = "text" name="url" placeholder = "Enter URL here"/>
-  <button type="submit"> Submit </button>
+<form action="/index" method = "post">
+  <input type = "text" name="url[url]" placeholder = "Enter URL here"/>
+  <input type="hidden" name="url[short_url]" id="hiddenFieldName">
+  <button id="submitbutton" type="submit"> Submit </button>
 </form>
 
 <p> Your shortened URL Is: </p>

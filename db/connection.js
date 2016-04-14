@@ -1,16 +1,14 @@
-var mongoose = require("mongoose")
+var mongoose = require("mongoose");
 
-var urlShortenerSchema = new mongoose.Schema(
+var UrlShortenerSchema = new mongoose.Schema(
   {
-    url:  String
-    key: {$regex: /^[a-zA-Z0-9]{2,4}$/} String
+    url:  String,
+    short_url: String
   }
 );
 
-mongoose.model("Url", urlShortenerSchema);
+mongoose.model("Url", UrlShortenerSchema);
 mongoose.connect("mongodb://localhost/urlshortener");
 
 var seedData = require("./seeds.json");
-module.exports = {
-  candidates: seedData
-}
+module.exports = mongoose;
