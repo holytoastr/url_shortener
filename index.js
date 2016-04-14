@@ -3,6 +3,10 @@ var hbs       = require("express-handlebars");
 var mongoose  = require("mongoose");
 var parser    = require("body-parser");
 
+<<<<<<< HEAD
+
+Amatic SC 
+=======
 var app       = express();
 var Crypt     = mongoose.model(TBD);
 
@@ -46,3 +50,4 @@ app.post("/cryptly", function(req, res){
 app.listen(app.get("port"), function(){
   console.log("Boo!");
 }); // end listen
+>>>>>>> cce4f41f45baa5705f4147325035d18a953df669
