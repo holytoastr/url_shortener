@@ -3,7 +3,7 @@ var mongoose = require("mongoose");
 var UrlShortenerSchema = new mongoose.Schema(
   {
     url:  String,
-    key: String
+    short_url: String
   }
 );
 
