@@ -3,10 +3,6 @@ var hbs       = require("express-handlebars");
 var mongoose  = require("mongoose");
 var parser    = require("body-parser");
 
-<<<<<<< HEAD
-
-Amatic SC 
-=======
 var app       = express();
 var Crypt     = mongoose.model(TBD);
 
@@ -26,11 +22,11 @@ app.use(parser.urlencoded({extended: true}));
 app.get("/", function(req, res){
   res.render("TBD");
 
-}); // end index view
+}); // end default view
 
 app.get("/cryptly", function(req, res){
   res.render("cryptly-index");
-});
+}); // end index view
 
 app.get("/cryptly/:name", function(req, res){
   Crypt.findOne({name: req.params.name}).then(function(TBD){
@@ -38,16 +34,15 @@ app.get("/cryptly/:name", function(req, res){
       TBD: TBD
     });
   });
-});
+}); // end generated crypt view
 
 app.post("/cryptly", function(req, res){
   short_url = TBD;
   TBD.create(req.body.long_url).then(function(long_url, short_url){
     res.redirect("/cryptly/:name");
   });
-});
+}); // end post request to crypt
 
 app.listen(app.get("port"), function(){
   console.log("Boo!");
 }); // end listen
->>>>>>> cce4f41f45baa5705f4147325035d18a953df669
