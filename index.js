@@ -26,21 +26,20 @@ app.get("/", function(req, res){
 }); // end default view
 
 app.get("/index", function(req, res){
-  res.render("index");
+  res.render("index", {
+  });
+
 }); // end index view
 
-app.get("/index/:name", function(req, res){
-  Crypt.findOne({name: req.params.name}).then(function(urlshortener){
-    res.render("index", {
-      urlshortener: urlshortener
-    });
+app.get("/:short_url", function(req, res){
+  Crypt.findOne({short_url: req.params.short_url}).then(function(urlshortener){
+    res.redirect(urlshortener.url);
   });
 }); // end generated crypt view
 
 app.post("/index", function(req, res){
   Crypt.create(req.body.url).then(function(url){
-
-    res.redirect("/index/:name");
+    res.redirect("/");
   });
 }); // end post request to crypt
 
