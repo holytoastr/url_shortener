@@ -26,6 +26,14 @@ Url shortener for the [recently deceased](http://vignette3.wikia.nocookie.net/be
 - A user can use the shorter url to redirect to the long url (silver)
 - A user can see all the short urls they've generated and the long forms (gold)
 
+## Challenges
+- Determining who would work on which part of the project. Solution: Jeff/Melissa paired on Express set up, Isaac worked on db set up, and Maureen on public and views set up. When domains crossed, we would pair to connect our pieces together. (Example: Jeff/Isaac connecting the db to express)
+- Testing while portions unfinished. Solution: Dummy data.
+- Connecting the database. Solution: Pairing. Group effort.
+
+## Unsolved issues
+None so far.
+
 ## Initial Planning
 ### Wireframe
 ![Wireframe](https://www.dropbox.com/s/t9mt7b9cunmxb56/cryptlywireframe.jpg?raw=1)
