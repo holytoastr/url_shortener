@@ -1,25 +1,25 @@
 {
   "name": "urlshortener",
   "version": "1.0.0",
-  "description": "",
+  "description": "Url shortener for the [recently deceased](http://vignette3.wikia.nocookie.net/beetlejuice/images/c/cc/HandbookForTheRecentlyDeceased.jpg/revision/latest?cb=20110929030416).",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/holytoastr/url_shortener/issues"
   },
   "homepage": "https://github.com/holytoastr/url_shortener#readme",
-
   "dependencies": {
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
     "express-handlebars": "^3.0.0",
     "mongoose": "^4.4.12"
-
-
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holytoastr/url_shortener.git"
   }
 }
