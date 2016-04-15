@@ -89,7 +89,7 @@ button:hover {
 
 input[type="text"]{
   font-size: 30px;
-  width: 570px;
+  width: 565px;
   padding: 10px;
   background-color: black;
   border: none;
@@ -166,7 +166,7 @@ input[type="text"]{
 
 .url {
   font-size: 30px;
-  margin-top: 0px;
+  padding-top: 20px;
 }
 
 } /* end 660px */
@@ -176,6 +176,7 @@ input[type="text"]{
 input[type="text"]{
   width: 75%;
 }
+
 
 } /* end 600 */
 
@@ -188,6 +189,7 @@ h1 {
 h2 {
   font-size: 40px;
 }
+
 
 .url {
   font-size: 25px;
@@ -207,11 +209,16 @@ button {
 @media screen and (max-width: 410px){
 
   input[type="text"]{
-    width: 70%;
+    width: 68%;
   }
 
   .url{
     font-size: 20px;
-    padding-top: 10px;
+    margin-top: 0;
+    margin-bottom: -6px;
+  }
+
+  p {
+    font-size: 35px;
   }
 }
